@@ -1,0 +1,26 @@
+// Tower of Hanoi
+
+
+using System;
+using System.Collections.Generic;
+
+
+class TowerOfHanoi{
+    
+    void MoveDesk(int n, Stack<int> tower1 , Stack<int> tower2, Stack<int> tower3)
+    {
+        if(n == 1) {
+            tower3.Push(tower1.Pop());
+            return;
+        }
+        
+        MoveDesk(n - 1, tower1, tower2, tower3);
+        tower3.Push(tower1.Pop());
+        MoveDesk(n - 1, tower2, tower3, tower1);
+    }
+    
+    
+    public static void Main(string[] args) {
+        
+    }
+}
