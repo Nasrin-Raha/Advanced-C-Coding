@@ -1,0 +1,24 @@
+//Events
+using System;
+using System.Collections.Generic;
+
+
+class Events{
+    
+    private static event EventHandler evt;
+    
+    
+    
+    public static void Main(string[] args) {
+        
+        evt += (sender, evtArgs) => {
+            Console.WriteLine("HellO World");
+        };
+        
+        evt += (sender, evtArgs) => {
+            Console.WriteLine("GoodBye World");
+        };
+        
+        evt.Invoke(null, new EventArgs());
+    }
+}
