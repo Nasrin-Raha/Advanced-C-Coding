@@ -1,0 +1,28 @@
+// delegate
+
+
+using System;
+using System.Collections.Generic;
+
+class Delegate{
+    
+    delegate void Print();
+    
+    public static void Main(string[] args) {
+        
+        Print print = null;
+        print += HelloWorld;
+        print += GoodByeWorld;
+        print();
+        
+    }
+    
+    
+    static void HelloWorld() {
+        Console.WriteLine("Hello World");
+    }
+    
+    static void GoodByeWorld() {
+        Console.WriteLine("GoodByeWorld");
+    }
+}
