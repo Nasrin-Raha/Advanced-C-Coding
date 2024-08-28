@@ -1,0 +1,24 @@
+//Actions
+
+using System;
+using System.Collections.Generic;
+
+class Actions{
+    
+    
+   private static Action<int, int>action;
+   
+   
+   static void HandledAction(int int1, int int2){
+       
+       Console.WriteLine("sum: " + (int1 + int2));
+       
+   }
+   
+   public static void Main(string[] args){
+       
+       
+       action += HandledAction;
+       action.Invoke(2, 3);
+   }
+}  
