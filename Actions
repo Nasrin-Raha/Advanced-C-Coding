@@ -11,7 +11,7 @@ class Actions{
    
    static void HandledAction(int int1, int int2){
        
-       Console.WriteLine("sum: " + (int1 + int2));
+       Console.WriteLine("sum: " + (int1 + int2).ToString());
        
    }
    
