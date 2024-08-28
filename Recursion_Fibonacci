@@ -1,0 +1,41 @@
+// Fibonacci using recurion
+
+using System;
+using System.Collections.Generic;
+
+
+class Recurion{
+    
+    static int fib(int n){
+        if(n == 0 || n == 1) {
+            return n;
+        }
+        else{
+            return fib(n -1) + fib(n - 2);
+        }
+    }
+    
+    
+    static int fib2(int n) {
+        if (n == 0 || n == 1) {
+            return n;
+        }
+        
+        int sLast = 0;
+        int Last = 1;
+        int curPos = 2;
+        
+        while(curPos <= n){
+            int temp = Last;
+            Last = Last + sLast;
+            sLast = temp;
+            curPos ++;
+        }
+        return Last;
+    }
+    
+    
+    public static void Main(string[] args) {
+        Console.WriteLine(fib2(11));
+    }
+}
